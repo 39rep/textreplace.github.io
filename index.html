@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="stylesheet.css">
+    <meta charset="utf-8">
+    <title>文字置換</title>
+  </head>
+  <body>
+    <div>
+      <p class="before">置換前文字列</p>
+      <textarea id="before" wrap="off" placeholder="ここに置換したいテキストを入力"></textarea>
+      <div class="button">
+        <input id="replace" type="button" value="置換" onclick="replaceButton()">
+        <input id="repair" type="button" value="復元(こっちは気にしないで)">
+        <div>
+          <br>
+            <p class="after">置換後文字列</p>
+            <textarea id="after" wrap="off"></textarea>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>
