@@ -12,7 +12,7 @@ function replaceButton(){
       if (colorcode[i] == colorcode[l]){
         continue;
       }
-      var pattern = new RegExp(colorcode[i],'g')
+      var pattern = new RegExp(colorcode[i],'g');
       beforeResult = beforeResult.replace(pattern,colorcode[i] + "]");
       console.log();
     }
