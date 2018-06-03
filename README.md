@@ -21,7 +21,9 @@ s
 s
 こんな感じのテキストを(sは空白文字)
 [big shita gothic #000001]s\<br>\<br>\<br>s\<br>\<br>\<br>s\<br>テスト\<br>\<br>s\<br>\<br>\<br>s\<br>\<br>\<br>s
+
 こんな感じに置換してくれる。
+
 このときコマンドの順番は何でもいい(#000001 big gothic shitaなど)
 
 なにかわからないところや不具合等あったらTwitter:@Replica1018まで
