@@ -1,25 +1,20 @@
-function replaceButton(){
-    var beforeText = document.getElementById('before').value;
+function replaceButton () {
+  //改行コードを統一,改行で分割
+  var beforeText = document.getElementById('before').value.replace(/\r\n|\r/g,"\n").replace(/\n/g,"\n<br>");
+  console.log(beforeText);
+  beforeText = beforeText.split('\n');
 
-    var beforeResult = beforeText.replace(/\n/g,"<br>")
-                                 .replace(/<br>small/g,"\n[small")
-                                 .replace(/<br>medium/g,"\n[medium")
-                                 .replace(/<br>big/g,"\n[big")
-                                 .replace(/\t/g,"[TAB]");
-    var colorcode = beforeResult.match(/#....../g);
-    for (var i = 0;i < colorcode.length;i++){
-      var l = i-1;
-      if (colorcode[i] == colorcode[l]){
-        continue;
-      }
-      var pattern = new RegExp(colorcode[i],'g');
-      beforeResult = beforeResult.replace(pattern,colorcode[i] + "]");
-      console.log();
+  //カラーコードがなければスキップ、含まれてたら置換→[#......]というふうに
+  var beforeResult = beforeText.map(function(value){
+    var str = value.search(/#....../);
+    if (str == -1){
+      return value;
+    }else{
+      return value.replace(value,"["+value+"]").replace("<br>","");
     }
-    beforeResult = beforeResult.replace(/]<br>/g,"]")
-                               .replace(/^small/,"[small")
-                               .replace(/^medium/,"[medium")
-                               .replace(/^big/,"[big");
+  });
 
-    document.getElementById('after').value = beforeResult;
+  beforeResult = beforeResult.join('').replace(/\[/g,"\n[").replace(/\]<br>/g,"]").replace(/\t/g,"[TAB]").slice(1);
+
+  document.getElementById('after').value = beforeResult;
 }
