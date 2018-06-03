@@ -6,7 +6,11 @@ function replaceButton () {
   //カラーコードがなければスキップ、含まれてたら置換→[#......]というふうに
   var beforeResult = beforeText.map(function(value){
     var str = value.search(/#....../);
-    if (str == -1){
+    var str2 = value.search("]");
+    console.log(str2);
+    if (str == -1 && str2 != -1){
+      return value.replace(/]$/,"]<br>");
+    }else if(str == -1){
       return value;
     }else{
       return value.replace(value,"["+value+"]").replace(/\[/g,"\n[").replace("<br>","");
