@@ -1,7 +1,6 @@
 function replaceButton () {
   //改行コードを統一,改行で分割
   var beforeText = document.getElementById('before').value.replace(/\r\n|\r/g,"\n").replace(/\n/g,"\n<br>");
-  console.log(beforeText);
   beforeText = beforeText.split('\n');
 
   //カラーコードがなければスキップ、含まれてたら置換→[#......]というふうに
