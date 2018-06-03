@@ -13,7 +13,7 @@ function replaceButton () {
     }
   });
   //もろもろ置換
-  beforeResult = beforeResult.join('')/*.replace(/\]<br>/g,"]")*/.replace(/\t/g,"[TAB]").slice(1);
+  beforeResult = beforeResult.join('').replace(/\]<br>/g,"]").replace(/\t/g,"[TAB]").slice(1);
   //表示
   document.getElementById('after').value = beforeResult;
 }
