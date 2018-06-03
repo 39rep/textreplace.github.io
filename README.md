@@ -2,24 +2,9 @@
 テキストボックスに置換したいテキストを入力してから左下の置換を押すだけ、多分できる。
 
 ---例---
-big shita gothic #000001
-s
-
-
-s
-
-
-s
-テスト
-
-s
-
-
-s
-
-
-s
+big shita gothic #000001<br>s<br><br><br>s<br><br><br>s<br>テスト<br><br>s<br><br><br>s<br><br><br>s
 こんな感じのテキストを(sは空白文字)
+
 [big shita gothic #000001]s\<br>\<br>\<br>s\<br>\<br>\<br>s\<br>テスト\<br>\<br>s\<br>\<br>\<br>s\<br>\<br>\<br>s
 
 こんな感じに置換してくれる。
