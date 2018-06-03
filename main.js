@@ -9,11 +9,11 @@ function replaceButton () {
     if (str == -1){
       return value;
     }else{
-      return value.replace(value,"["+value+"]").replace("<br>","");
+      return value.replace(value,"["+value+"]").replace(/\[/g,"\n[").replace("<br>","");
     }
   });
-
-  beforeResult = beforeResult.join('').replace(/\[/g,"\n[").replace(/\]<br>/g,"]").replace(/\t/g,"[TAB]").slice(1);
-
+  //もろもろ置換
+  beforeResult = beforeResult.join('')/*.replace(/\]<br>/g,"]")*/.replace(/\t/g,"[TAB]").slice(1);
+  //表示
   document.getElementById('after').value = beforeResult;
 }
