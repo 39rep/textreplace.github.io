@@ -12,3 +12,4 @@ big shita gothic #000001<br>s<br><br><br>s<br><br><br>s<br>テスト<br><br>s<br
 このときコマンドの順番は何でもいい(#000001 big gothic shitaなど)
 
 なにかわからないところや不具合等あったらTwitter:@Replica1018まで
+＊コメントの文末に]があったら崩れるので注意
